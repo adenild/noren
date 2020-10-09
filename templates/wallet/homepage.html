@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block primary_dependencies %}
+
+{% endblock %}
+
+{% block content %}
+<div id="wallet">
+    {% verbatim %}
+    {{ message }}
+    {% endverbatim %}
+</div>
+{% endblock %}
+
+{% load static %}
+{% block secondary_dependencies %}
+<script src="{% static 'wallet/Noren.js' %}"></script>
+{% endblock %}

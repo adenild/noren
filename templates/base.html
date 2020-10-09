@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'wallet/Noren.css' %}">
+    <script src="{% static 'bower_components/vue/dist/vue.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/font-awesome/css/all.css' %}">
+{#    <link rel="icon" type="image/png" href="{% static 'images/biblio-icon.png' %}">#}
+    {% block primary_dependencies %}
+
+    {% endblock %}
+    <title>Noren</title>
+</head>
+<body>
+    <div class="noren-content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'bower_components/font-awesome/js/all.js' %}"></script>
+    {% block secondary_dependencies %}
+
+    {% endblock %}
+</body>
+</html>
