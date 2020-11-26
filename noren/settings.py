@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+
+from django.conf.global_settings import STATICFILES_FINDERS
+
 from config.vars import POSTGRES_USER, POSTGRES_PASS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -131,6 +134,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+STATICFILES_FINDERS.append('npm.finders.NpmFinder')
+
+NPM_ROOT_PATH = os.path.join(BASE_DIR, "static")
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, "static")
 

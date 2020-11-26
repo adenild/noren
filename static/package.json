@@ -1,0 +1,26 @@
+{
+  "name": "noren",
+  "description": "Open Source solution to record expenses.",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adenild/noren.git"
+  },
+  "keywords": [],
+  "author": "Adenildo Junior",
+  "bugs": {
+    "url": "https://github.com/adenild/noren/issues"
+  },
+  "homepage": "https://github.com/adenild/noren",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.12"
+  }
+}
