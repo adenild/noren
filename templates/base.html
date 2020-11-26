@@ -4,18 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'wallet/Noren.css' %}">
+    <link rel="stylesheet" href="{% static 'noren/Noren.css' %}">
     <script src="{% static 'bower_components/vue/dist/vue.js' %}"></script>
     <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'bower_components/font-awesome/css/all.css' %}">
-{#    <link rel="icon" type="image/png" href="{% static 'images/biblio-icon.png' %}">#}
+    <link rel="icon" type="image/png" href="{% static 'assets/logo.ico' %}"/>
     {% block primary_dependencies %}
 
     {% endblock %}
     <title>Noren</title>
 </head>
 <body>
-    <div class="noren-content">
+    <div class="noren-navbar">
+        <a href="/">
+            <img class="noren-logo" src="{% static 'assets/logo.png' %}" alt="noren logo">
+        </a>
+        <div class="noren-navbar-menu" style="flex-grow: 1">
+            <a class="noren-navbar-item" href="/wallet/inflows">
+                <div class="noren-navbar-btn">Entradas</div>
+            </a>
+            <a class="noren-navbar-item" href="/wallet/saidas">
+                <div class="noren-navbar-btn">Saídas</div>
+            </a>
+            <a class="noren-navbar-item" href="/calendario">
+                <div class="noren-navbar-btn">Calendário</div>
+            </a>
+        </div>
+        <div class="noren-navbar-btn" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="noren-profile-image" src="{% static 'assets/profile.png' %}" alt="profile image">
+            <div class="dropdown-menu noren-dropdown" aria-labelledby="navbarDropdownMenuLink" style="margin-top: -1px">
+              <a class="dropdown-item noren-dropdown-item" href="#">Dashboard</a>
+              <a class="dropdown-item noren-dropdown-item" href="#">Edit Profile</a>
+              <a class="dropdown-item noren-dropdown-item" href="#">Log Out</a>
+            </div>
+        </div>
+    </div>
+    <div id="noren" class="noren-content">
         {% block content %}
 
         {% endblock %}
@@ -24,6 +48,7 @@
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.bundle.js' %}"></script>
     <script src="{% static 'bower_components/font-awesome/js/all.js' %}"></script>
+    <script src="{% static 'bower_components/moment/moment.js' %}"></script>
     {% block secondary_dependencies %}
 
     {% endblock %}

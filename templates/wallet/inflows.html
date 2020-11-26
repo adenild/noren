@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block primary_dependencies %}
+
+{% endblock %}
+
+{% block content %}
+<div id="inflows" class="noren-canvas">
+    <div class="noren-canvas-title">
+        <i class="fas fa-hand-holding-usd"></i>
+        <b>Entradas</b>
+    </div>
+    <hr>
+    {% verbatim %}
+    <table v-for="operation in operations" style="width: 100%; border: solid 1px #1b1e21">
+        <thead style="background-color: #e1e1e1">
+            <tr>
+                <th style="padding: 0 5px; width: 5%">Data</th>
+                <th style="padding: 0 5px; width: 60%">Título</th>
+                <th style="padding: 0 5px; width: 20%">Valor</th>
+                <th style="padding: 0 5px; width: 15%">Carteira</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 0 5px">{{ operation.fields.date | formatDate }}</td>
+                <td style="padding: 0 5px">{{ operation.fields.title }}</td>
+                <td style="padding: 0 5px">{{ operation.fields.value }}</td>
+                <td style="padding: 0 5px">{{ wallets[operation.fields.wallet-1].fields.title }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% endverbatim %}
+</div>
+{% endblock %}
+
+{% load static %}
+{% block secondary_dependencies %}
+<script src="{% static 'noren_wallet/Inflows.js' %}"></script>
+{% endblock %}

@@ -140,4 +140,5 @@ BOWER_INSTALLED_APPS = (
     'popper.js',
     'vue',
     'font-awesome',
+    'moment',
 )

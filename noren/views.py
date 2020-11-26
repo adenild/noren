@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 
 # Create your views here.
-def inflows(request):
+def homepage(request):
     print(f"Usuário: {request.user}, ID: {request.user.id}")
-    return render(request, "wallet/inflows.html", {'base': 'base.html'})
+    return render(request, "noren/homepage.html", {'base': 'base.html'})
+
