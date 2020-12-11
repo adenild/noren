@@ -1,8 +1,9 @@
 version = 1
 
+test_patterns = ["*/tests.py"]
+
 exclude_patterns = [
-    "noren_wallet/migrations/**",
-    "noren_auth/migrations/**"
+    "*/migrations/**"
 ]
 
 [[analyzers]]
